@@ -1,0 +1,20 @@
+[project]
+name = "aev-plig"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas>=3.0.3",
+    "qcelemental>=0.50.2",
+    "rdkit>=2026.3.3",
+    "torch>=2.8.0",
+    "torch-geometric>=2.8.0",
+    "torch-scatter>=2.1.2",
+    "torchani>=2.8.2",
+    "torchaudio>=2.11.0",
+    "torchvision>=0.23.0",
+]
+
+[tool.uv.extra-build-dependencies]
+torch-scatter = ["torch"]

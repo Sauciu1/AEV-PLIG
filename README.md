@@ -16,21 +16,12 @@ AEV-PLIG has been tested on the following systems:
 + Linux: Ubuntu 22.04.5 LTS
 
 ### Create conda environment
-Installation times may vary, but took around 30 seconds on Mac M1.
-For *macOS*:
-```
-conda env create --file aev-plig-mac.yml
-```
-For *Linux*:
-```
-conda env create --file aev-plig-linux.yml
-```
-Install packages manually:
-```
-conda create --name aev-plig python=3.8
-conda activate aev-plig
-pip install torch torchvision torchaudio torch-scatter torch_geometric rdkit torchani qcelemental pandas biopandas scikit-learn
+This fork was modified to work with UV and be directly installable as a package.
 
+``` cmd
+pip install uv
+uv sync
+source .venv/bin/activate
 ```
 
 ## Demo

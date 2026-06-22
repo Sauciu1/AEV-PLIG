@@ -110,7 +110,7 @@ def GetMolAEVs_extended(protein_path, mol, atom_keys, radial_coefs, atom_map):
     AEVC = torchani_mod.AEVComputer(RcR, RcA, EtaR, RsR, 
                                 EtaA, Zeta, RsA, TsA, len(atom_symbols))
     
-    SC = torchani.SpeciesConverter(atom_symbols)
+    SC = torchani_mod.SpeciesConverter(atom_symbols)
     sc = SC((atomicnums, coordinates))
     
     aev = AEVC.forward((sc.species, sc.coordinates), mol_len)
@@ -153,7 +153,7 @@ def atom_features(atom, features=["atom_symbol",
     if "total_num_Hs" in features:
         feature_list.append(len([x.GetSymbol() for x in atom.GetNeighbors() if x.GetSymbol() == "H"]))
     if "explicit_valence" in features: #-NEW ADDITION FOR PLIG
-        feature_list.append(atom.GetExplicitValence())
+        feature_list.append(atom.GetValence(Chem.ValenceType.EXPLICIT))
     if "is_aromatic" in features:
         
         if atom.GetIsAromatic():
