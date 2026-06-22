@@ -3,8 +3,8 @@ import random
 import time
 import torch.nn as nn
 from torch_geometric.loader import DataLoader
-from helpers import rmse, pearson, model_dict
-from utils import GraphDataset, init_weights
+from aev_plig.helpers import rmse, pearson, model_dict
+from torchani_mod.utils import GraphDataset, init_weights
 import os
 import pandas as pd
 import argparse

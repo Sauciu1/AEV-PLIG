@@ -12,9 +12,13 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "biopandas>=0.5.1",
+    "importlib-metadata",
+    "lark",
     "pandas",
     "qcelemental",
     "rdkit",
+    "scikit-learn",
     "torch",
     "torch-geometric",
     "torch-scatter",
@@ -23,3 +27,7 @@ dependencies = [
 
 [tool.uv.extra-build-dependencies]
 torch-scatter = ["torch"]
+
+
+[tool.setuptools.package-data]
+aev-plig = ["data/PDB_Atom_Keys.csv"]

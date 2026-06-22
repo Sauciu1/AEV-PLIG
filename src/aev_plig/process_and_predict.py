@@ -8,9 +8,9 @@ from tqdm import tqdm
 from rdkit import Chem
 from biopandas.pdb import PandasPdb
 import os
-from utils import GraphDatasetPredict
+from torchani_mod.utils import GraphDatasetPredict
 from torch_geometric.loader import DataLoader
-from helpers import model_dict
+from aev_plig.helpers import model_dict
 import argparse
 import time
 import sys

@@ -4,7 +4,7 @@ import os
 import argparse
 
 from torch_geometric.data import InMemoryDataset, Data
-from aev_plig_local.utils import GraphDataset as BaseGraphDataset
+from torchani_mod.utils import GraphDataset as BaseGraphDataset
 import torch
 from sklearn.preprocessing import StandardScaler
 import numpy as np

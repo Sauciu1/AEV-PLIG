@@ -1,8 +1,8 @@
 import pandas as pd
 import torch
 import torchani_mod
-import qcelemental as qcel
 import numpy as np
+import qcelemental as qcel
 from rdkit import Chem
 
 
@@ -92,9 +92,7 @@ def GetMolAEVs_extended(protein_path, mol, atom_keys, radial_coefs, atom_map):
     coordinates = torch.tensor(coordinates.values)
     coordinates = coordinates.unsqueeze(0)
 
-    atom_symbols = []
-    for i in range(1, 23):
-        atom_symbols.append(qcel.periodictable.to_symbol(i))
+    atom_symbols = [qcel.periodictable.to_symbol(i) for i in range(1, 23)]
 
     AEVC = torchani_mod.AEVComputer(RcR, RcA, EtaR, RsR,
                                 EtaA, Zeta, RsA, TsA, len(atom_symbols))
