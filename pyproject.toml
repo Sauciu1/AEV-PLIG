@@ -15,18 +15,11 @@ dependencies = [
     "biopandas>=0.5.1",
     "importlib-metadata",
     "lark",
-    "pandas",
-    "qcelemental",
-    "rdkit",
+    "pandas>=3.0.3",
+    "qcelemental>=0.50.2",
+    "rdkit>=2026.3.3",
     "scikit-learn",
-    "torch",
-    "torch-geometric",
-    "torchani",
+    "torch>=2.8.0",
+    "torch-geometric>=2.8.0",
+    "torchani>=2.7.1",
 ]
-
-[tool.uv.extra-build-dependencies]
-torch-scatter = ["torch"]
-
-
-[tool.setuptools.package-data]
-aev-plig = ["data/PDB_Atom_Keys.csv"]
